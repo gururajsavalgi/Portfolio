@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+{% load static %}
+<section class="contact" id="contact">
+    <div class="contact-text">
+        <h2>Contact<span> Me</span></h2>
+        <h4>Let's work Togehter</h4>
+        {% for i in Contact %}
+        <div class="contact-list">
+            <li><i class='bx bxs-send' ></i>{{i.gmail}}</li>
+            <li><i class='bx bxs-send' ></i>{{i.address}}</li>
+            <li><i class='bx bxs-phone'></i>{{i.number}}</li>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="contact-form">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="name" name="name" placeholder="Enter your Name" required>
+            <input type="email" name="email" placeholder="Enter your Email" required>
+            <input type="desc" name="subject" placeholder="Enter your Subject" required>
+            <textarea name="desc" placeholder="Enter Your  Message" required></textarea>
+            <input type="submit" value="submit" class="send">
+        </form>
+    </div>
+</section>
+<div class="last-text">
+    <p>Developed with love by Gururaj Savalgi &copy; 2023</p>
+</div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+{% endblock body %}

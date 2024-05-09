@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+   </head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">Portfolio</a>
+        <button class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- This is the hamburger icon -->
+        </button>
+        <nav class="navbar" id="navbar">
+            
+            <a href="/" class="active">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Projects</a>
+            <a href="/skills" >Skills</a>
+            <a href="/contact">Contact</a>
+        
+        </nav>
+    </header>
+    {% block body %} {% endblock body %}
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    <script src="/static/javascript/main.js"></script>
+</body>
+</html>

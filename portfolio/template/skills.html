@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+{% load static %}
+
+<h2 class="sub-title">My<span> Skills</span></h2>
+    <section>
+        <div class="container1" id="skills">
+            <h2 class="heading1">Technical Skills</h2>
+            {% for i in Skill %}
+            <div class="Technical-bars">
+                <div class="bar"><i class='{{i.icon}}' style='color:{{i.color}}'  ></i>
+                    <div class="info">
+                                <span>{{i.name}}</span>
+                </div>
+                <div class="progress-line">
+                    <span style="width:{{i.percentage}}%"></span>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="container1">
+            <h2 class="heading1">Professional Skills</h2>
+            <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">creativity</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">75%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Teamwork</div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    {% endblock body %}

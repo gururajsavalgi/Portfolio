@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+{% load static %}
+<h1 class="sub-title">My <span>Services</span></h1>
+<section>
+    
+    {% for i in Project %}
+    <div class="services" id="services">
+        <div class="container">
+            
+            
+            <div class="services-list">
+                <div>
+                    <a href="{{i.link1}}" onclick="checkLink(event, '{{ i.link1 }}')" target="_blank"><i class='bx bxl-github' style='color:#00eeff' ></i></a>
+                    <a href="{{i.link2}}" onclick="checkLink(event, '{{ i.link2 }}')" target="_blank"><i class='bx bx-link' style='color:#00eeff' ></i></a>
+                    <h2>{{i.name}}</h2>
+                    <pre>{{ i.about }}</pre>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock body %}
